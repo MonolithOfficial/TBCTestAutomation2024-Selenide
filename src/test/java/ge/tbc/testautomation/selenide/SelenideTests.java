@@ -1,4 +1,4 @@
-package selenide;
+package ge.tbc.testautomation.selenide;
 
 import com.codeborne.selenide.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -18,8 +18,9 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideTests {
     SoftAssert sfa;
+
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.timeout = 10;
         Configuration.browser = "chrome";
@@ -28,7 +29,7 @@ public class SelenideTests {
     }
 
     @Test
-    public void test01(){
+    public void test01() {
         open("https://swoop.ge");
         SelenideElement someText = $(withText("ხუთშაბათ"));
         someText.scrollTo();
@@ -91,7 +92,7 @@ public class SelenideTests {
     }
 
     @Test
-    public void scrollTest(){
+    public void scrollTest() {
         open("https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html");
         SelenideElement bloggerDiv = $(withText("pular Tutorials"));
         bloggerDiv.scrollIntoView(false);
@@ -121,7 +122,7 @@ public class SelenideTests {
     }
 
     @Test
-    public void dropDownTest(){
+    public void dropDownTest() {
         open("https://techcanvass.com/examples/register.html");
         SelenideElement select = $(byName("model"));
         select.selectOption("Serene Pad 64G", "Mega 123 Medium screen");

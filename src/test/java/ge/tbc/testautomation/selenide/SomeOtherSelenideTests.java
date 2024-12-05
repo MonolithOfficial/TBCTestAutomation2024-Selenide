@@ -1,4 +1,4 @@
-package selenide;
+package ge.tbc.testautomation.selenide;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -18,11 +18,13 @@ import static com.codeborne.selenide.Selenide.*;
 public class SomeOtherSelenideTests {
     WebDriver driver;
     SoftAssert sfa;
+
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
         sfa = new SoftAssert();
     }
+
     @Test
     public void testChained() {
         open("https://techcanvass.com/examples/register.html");
