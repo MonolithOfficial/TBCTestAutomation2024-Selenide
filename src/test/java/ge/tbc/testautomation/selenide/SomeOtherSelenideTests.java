@@ -42,6 +42,7 @@ public class SomeOtherSelenideTests {
         open("https://techcanvass.com/examples/register.html");
         SelenideElement form = $(by("action", "javascript:void(0);"));
         ElementsCollection inputs = form.findAll(By.tagName("input"));
+        title();
     }
 
     @Test

@@ -2,17 +2,48 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
+<!--BEFORESUITE-->
 <suite name="TestSuite" thread-count="2" parallel="tests">
+<!--    BEFORETEST -->
     <test name="ChromeTest">
         <parameter name="browserType" value="chrome"/>
+<!--        BEFORECLASS-->
         <classes>
             <class name="ge.tbc.testautomation.selenide.AdvancedSelenide">
-<!--                <methods>-->
-<!--                    <include name=""-->
-<!--                </methods>-->
+<!--                BEFOREMETHOD -->
+                <methods>
+                    <include name="complexSendKeys"/>
+                </methods>
+<!--                AFTERMETHOD-->
             </class>
+<!--            AFTERCLASS-->
         </classes>
     </test>
+<!--    <test name="GroupTest">-->
+<!--        <groups>-->
+<!--            <define name="smoke tests">-->
+
+<!--            </define>-->
+
+<!--            <run>-->
+<!--                <include name="smoke tests"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <packages>-->
+<!--            <package name="testng"></package>-->
+<!--        </packages>-->
+<!--        <classes>-->
+<!--            <class name="ge.tbc.testautomation.selenide.AdvancedSelenide">-->
+<!--                &lt;!&ndash;                BEFOREMETHOD &ndash;&gt;-->
+<!--                &lt;!&ndash;                <methods>&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <include name=""&ndash;&gt;-->
+<!--                &lt;!&ndash;                </methods>&ndash;&gt;-->
+<!--                &lt;!&ndash;                AFTERMETHOD&ndash;&gt;-->
+<!--            </class>-->
+<!--            &lt;!&ndash;            AFTERCLASS&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    AFTERTEST-->
 <!--    <test name="FirefoxTest">-->
 <!--        <parameter name="browserType" value="firefox"/>-->
 <!--        <classes>-->
@@ -24,3 +55,4 @@
 <!--        </classes>-->
 <!--    </test>-->
 </suite>
+<!--AFTERSUITE-->
