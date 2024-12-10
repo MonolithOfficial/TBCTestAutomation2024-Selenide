@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite" thread-count="2" parallel="tests">
+    <test name="GroupsTest">
+        <groups>
+            <define name="group 1"/>
+            <define name="group 2"/>
+            <define name="all">
+                <include name="group 1"/>
+                <include name="group 2"/>
+            </define>
+
+            <run>
+                <include name="all"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="ge.tbc.testautomation.*"/>
+<!--            <package name="ge.tbc.testautomation.selenide"/>-->
+        </packages>
+<!--        <classes>-->
+<!--            <class name="ge.tbc.testautomation.selenide.AdvancedSelenide">-->
+<!--                <methods>-->
+<!--                    <include name="complexSendKeys"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+    </test>
+</suite>

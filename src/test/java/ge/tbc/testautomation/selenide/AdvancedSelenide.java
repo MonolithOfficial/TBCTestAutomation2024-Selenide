@@ -41,7 +41,7 @@ public class AdvancedSelenide extends BaseTest {
         }
     }
 
-    @Test
+    @Test(groups = {"group 2"})
     public void complexSendKeys() {
         open("https://redbubble.com");
         SelenideElement searchBar = $x("//input[@type='search']");
