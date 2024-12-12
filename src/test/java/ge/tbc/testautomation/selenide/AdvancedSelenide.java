@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AdvancedSelenide extends BaseTest {
+
     @Test
     public void fileUpload() {
         open("https://tsotne-aburjania-redberry-project.netlify.app/");
